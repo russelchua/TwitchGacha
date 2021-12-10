@@ -1,1 +1,28 @@
-<p>donate-form works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>donate-from</title>
+</head>
+
+<body>
+
+  <!--TODO use *ngFor to generate same label-->
+  <form id="idFormAioCheckOut">
+    <label *ngFor="let item of getItemArray;" class="col-xs-12">{{item.item}}:
+      <input type="text" name="{{item.name}}" value="{{item.value}}" />
+      {{item.innerhtml}}
+      <br>
+    </label>
+
+    <input type="hidden" name="MerchantID" value="2000132" />
+    <input type="hidden" name="HashKey" value="5294y06JbISpM5x9" />
+    <input type="hidden" name="HashIV" value="v77hoKGq4kWxNNIS" />
+
+    <button type="submit" class="btn btn-default">綠界線上支付</button>
+  </form>
+
+</body>
+
+</html>
